@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListView.agregar">
+    <StackLayout Padding="20" BackgroundColor="#FFFFFF" >
+        <StackLayout Orientation="Vertical">
+            <Image Source="add.png"  WidthRequest="70" HeightRequest="70"></Image>
+            <Label Text="Agregar Empleado" HorizontalTextAlignment="Center"  FontSize="25"></Label>
+            <Entry Placeholder="Nombre" x:Name="Nombre" ></Entry>
+            <Entry Placeholder="Descripción" x:Name="Description" ></Entry>
+            <Button Text="Agregar Empleado"  BackgroundColor="#2196F3"  HorizontalOptions="FillAndExpand"></Button>
+
+        </StackLayout>
+        <ListView VerticalOptions="EndAndExpand" x:Name="mylistview" BackgroundColor="#FFFFFF">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}" Detail="{Binding Desc}">
+                        <TextCell.ContextActions>
+                            <MenuItem Text="Delete" CommandParameter="{Binding .}" IsDestructive="True" Clicked="OnDelete"></MenuItem>
+                            <MenuItem Text="Update" CommandParameter="{Binding .}" IsDestructive="True" Clicked="OnUpdate"></MenuItem>
+                        </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
+    

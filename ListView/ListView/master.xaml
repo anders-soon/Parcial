@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListView.master"
+             Title="Master">
+    <StackLayout Orientation="Vertical" BackgroundColor="#D32F2F">
+        <Label Text="Menu" FontSize="30" TextColor="White"/>
+        <Button Text="Agregar" Image="add.png"  x:Name="btnAgregar" Clicked="btnAgregar_Clicked"/>
+        <Button Text="Editar" Image="edit.png"  x:Name="btnEditar" Clicked="btnEditar_Clicked"/>
+        <Button Text="Eliminar" Image="remove.png" x:Name="btnEliminar" Clicked="btnEliminar_Clicked"/>
+        <Button Text="Buscar" Image="search.png" x:Name="btnBuscar" Clicked="btnBuscar_Clicked"/>
+    </StackLayout>
+</ContentPage>
